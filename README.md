@@ -240,14 +240,6 @@ restarts; your queue and position are restored.)
   session D-Bus bus (i.e. a desktop login, not bare SSH).
 - **Force a fresh daemon** — `pkill -f tidalcli.daemon`; it'll autostart again.
 
-## Security
-
-Tokens are written `0600`, the data/state dirs `0700`, and the control socket is
-bound `0600` (anyone who can connect can drive playback). Playback URLs are
-restricted to http(s); mpv's `ytdl` is disabled; no shell/eval/pickle is used.
-See `SECURITY.md` for the full notes and residual risks (unofficial deps, no
-cert pinning, ToS).
-
 ## Project layout
 
 ```
